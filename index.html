@@ -1,19 +1,19 @@
 <!DOCTYPE html><html lang="th">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Thai Leafhopper Field Guides</title><meta name="description" content="Field guides and identification resources for Thai leafhoppers by Purikun"><style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Thai Leafhopper Field Guides</title><style>
 
 body{
-    font-family: Arial, sans-serif;
-    background:#f5f5f5;
     margin:0;
+    font-family:Arial,sans-serif;
+    background:#f5f5f5;
 }
 
 header{
     background:white;
-    padding:40px 20px;
     text-align:center;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    padding:30px 15px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
 }
 
 header h1{
@@ -24,28 +24,49 @@ header p{
     color:#666;
 }
 
-.container{
-    max-width:1100px;
+.tabs{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    padding:15px;
+    background:white;
+    position:sticky;
+    top:0;
+}
+
+.tab-button{
+    border:none;
+    padding:10px 20px;
+    border-radius:10px;
+    cursor:pointer;
+    background:#e0e0e0;
+}
+
+.tab-button.active{
+    background:#222;
+    color:white;
+}
+
+.content{
+    max-width:1000px;
     margin:auto;
     padding:20px;
 }
 
-.section-title{
-    margin-top:40px;
-    margin-bottom:20px;
+.tab{
+    display:none;
 }
 
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:20px;
+.tab.active{
+    display:block;
 }
 
 .card{
     background:white;
     border-radius:15px;
     overflow:hidden;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    margin-bottom:20px;
 }
 
 .card img{
@@ -54,49 +75,104 @@ header p{
 }
 
 .card-content{
-    padding:15px;
-}
-
-.card h3{
-    margin-top:0;
+    padding:20px;
 }
 
 .button{
     display:inline-block;
-    padding:10px 16px;
-    text-decoration:none;
+    padding:12px 18px;
     border-radius:8px;
+    text-decoration:none;
     background:#222;
     color:white;
 }
 
-.donate{
-    text-align:center;
-    background:white;
-    padding:30px;
-    border-radius:15px;
-    margin-top:20px;
+.preview{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.preview-box{
+    background:#ddd;
+    height:250px;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.buy-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
 }
 
 footer{
     text-align:center;
-    color:#666;
     padding:30px;
+    color:#666;
 }
 
-</style></head><body><header><h1>คู่มือเพลี้ยจักจั่นในประเทศไทย</h1><p>
-Thai Leafhopper Field Guides
+</style></head><body><header><h1>คู่มือเพลี้ยจักจั่นในประเทศไทย</h1><p>Thai Leafhopper Field Guides</p><p>by Purikun</p></header><div class="tabs"><button class="tab-button active"
+onclick="showTab('guides',this)">
+Guides
+</button>
+
+<button class="tab-button"
+onclick="showTab('donate',this)">
+Donate
+</button>
+
+</div><div class="content"><div id="guides" class="tab active"><div class="card"><img src="Penthimiini_of_Thailand.png"><div class="card-content"><h2>Penthimiini of Thailand</h2><p>
+Photographic Field Guide to the Penthimiini of Thailand
 </p><p>
-by Purikun
-</p></header><div class="container"><h2 class="section-title">Field Guides</h2><div class="grid"><div class="card"><img src="Penthimiini_of_Thailand.png"><div class="card-content"><h3>Penthimiini of Thailand</h3><p>
-Photographic field guide to the tribe Penthimiini of Thailand.
-</p><a class="button" href="penthimiini.html">
-View Guide
-</a></div></div></div><h2 class="section-title">Support the Project</h2><div class="donate"><h3>Donate</h3><p>
-Support future field guides, updates and publications.
+Version 1.0
+</p><h3>About this guide</h3><p>
+A photographic field guide to the tribe Penthimiini of Thailand,
+including identification keys, photographs,
+and species information.
+</p><h3>Free Preview</h3><div class="preview"><div class="preview-box">
+Preview Page 1
+</div><div class="preview-box">
+Preview Page 2
+</div></div><br><a class="button" href="#">
+Download Free Sample
+</a><h3>Purchase Guide</h3><div class="buy-buttons"><a class="button"
+href="#">
+Buy Thai Edition
+</a>
+
+<a class="button"
+href="#">
+Buy English Edition
+</a>
+
+</div><h3>Update History</h3><ul>
+<li>v1.0 Initial Release</li>
+</ul></div></div></div><div id="donate" class="tab"><div class="card"><div class="card-content"><h2>Support the Project</h2><p>
+Donations help support future publications,
+updates, and new field guides.
 </p><a class="button" href="#">
 Donate
-</a></div></div><footer>© 2026 Purikun
+</a></div></div></div></div><footer>© 2026 Purikun
 
-</footer></body>
+</footer><script>
+
+function showTab(tabId,button){
+
+document.querySelectorAll('.tab')
+.forEach(tab=>tab.classList.remove('active'));
+
+document.querySelectorAll('.tab-button')
+.forEach(btn=>btn.classList.remove('active'));
+
+document.getElementById(tabId)
+.classList.add('active');
+
+button.classList.add('active');
+
+}
+
+</script></body>
 </html>
