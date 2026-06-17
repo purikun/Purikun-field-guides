@@ -1,69 +1,102 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html><html lang="th">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Penthimiini of Thailand</title><meta name="description" content="Photographic Field Guide to the Penthimiini of Thailand"><style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Thai Leafhopper Field Guides</title><meta name="description" content="Field guides and identification resources for Thai leafhoppers by Purikun"><style>
+
 body{
     font-family: Arial, sans-serif;
-    max-width: 900px;
-    margin:auto;
-    padding:20px;
-    line-height:1.6;
+    background:#f5f5f5;
+    margin:0;
 }
 
-.cover{
-    display:block;
+header{
+    background:white;
+    padding:40px 20px;
+    text-align:center;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+header h1{
+    margin:0;
+}
+
+header p{
+    color:#666;
+}
+
+.container{
+    max-width:1100px;
     margin:auto;
-    max-width:400px;
+    padding:20px;
+}
+
+.section-title{
+    margin-top:40px;
+    margin-bottom:20px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.card img{
     width:100%;
-    height:auto;
+    display:block;
+}
+
+.card-content{
+    padding:15px;
+}
+
+.card h3{
+    margin-top:0;
 }
 
 .button{
     display:inline-block;
-    padding:12px 20px;
-    margin:5px;
+    padding:10px 16px;
     text-decoration:none;
-    border:1px solid #333;
     border-radius:8px;
+    background:#222;
+    color:white;
 }
 
-.center{
+.donate{
     text-align:center;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    margin-top:20px;
 }
-</style></head><body><h1 class="center">Penthimiini of Thailand</h1><img src="Penthimiini_of_Thailand.png"
-alt="Penthimiini of Thailand"
-class="cover">
 
-<p class="center">
-Photographic Field Guide to the Penthimiini of Thailand
-</p><hr><h2>Available Editions</h2><p>
-This guide is available in both Thai and English editions.
-</p><div class="center"><a class="button"
-href="Penthimiini_of_Thailand_Thai_Ed_v1.0.pdf">
-📖 Thai Edition
-</a>
+footer{
+    text-align:center;
+    color:#666;
+    padding:30px;
+}
 
-<a class="button"
-href="Penthimiini_of_Thailand_English_Ed_v1.0.pdf">
-📖 English Edition
-</a>
-
-</div><hr><h2>About This Guide</h2><p>
-A photographic field guide to the tribe Penthimiini of Thailand,
-including identification keys, photographs, and species information.
-</p><hr><h2>Current Version</h2><p>Version 1.0</p><hr><h2>Update History</h2><ul>
-<li>v1.0 – Initial Release</li>
-</ul><hr><h2>Future Publications</h2><ul>
-<li>Additional Thai leafhopper guides</li>
-<li>Future field guides and reference works</li>
-</ul><hr><h2>Donate</h2><p>
-Support future updates and publications.
+</style></head><body><header><h1>คู่มือเพลี้ยจักจั่นในประเทศไทย</h1><p>
+Thai Leafhopper Field Guides
 </p><p>
-<a class="button" href="#">
-❤️ Donate
-</a>
-</p><hr><p class="center">
-© 2026 Purikun
-</p></body>
+by Purikun
+</p></header><div class="container"><h2 class="section-title">Field Guides</h2><div class="grid"><div class="card"><img src="Penthimiini_of_Thailand.png"><div class="card-content"><h3>Penthimiini of Thailand</h3><p>
+Photographic field guide to the tribe Penthimiini of Thailand.
+</p><a class="button" href="penthimiini.html">
+View Guide
+</a></div></div></div><h2 class="section-title">Support the Project</h2><div class="donate"><h3>Donate</h3><p>
+Support future field guides, updates and publications.
+</p><a class="button" href="#">
+Donate
+</a></div></div><footer>© 2026 Purikun
+
+</footer></body>
 </html>
