@@ -1,114 +1,250 @@
-<!DOCTYPE html><html lang="th">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Thai Leafhopper Field Guides</title><style>
 
 body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#f5f5f5;
+margin:0;
+font-family:Arial,sans-serif;
+background:#f5f5f5;
 }
 
 header{
-    background:white;
-    text-align:center;
-    padding:30px 15px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+background:white;
+padding:35px 20px;
+text-align:center;
+box-shadow:0 2px 8px rgba(0,0,0,.08);
 }
 
 header h1{
-    margin:0;
+margin:0;
+font-size:2em;
 }
 
 header p{
-    color:#666;
+color:#666;
+margin:8px 0 0;
 }
 
 .tabs{
-    display:flex;
-    justify-content:center;
-    gap:10px;
-    padding:15px;
-    background:white;
-    position:sticky;
-    top:0;
+display:flex;
+justify-content:center;
+gap:10px;
+padding:15px;
+background:white;
+position:sticky;
+top:0;
+z-index:100;
 }
 
-.tab-button{
-    border:none;
-    padding:10px 20px;
-    border-radius:10px;
-    cursor:pointer;
-    background:#e0e0e0;
+.tabs button{
+border:none;
+padding:10px 20px;
+border-radius:8px;
+cursor:pointer;
 }
 
-.tab-button.active{
-    background:#222;
-    color:white;
+.tabs button.active{
+background:#222;
+color:white;
 }
 
-.content{
-    max-width:1000px;
-    margin:auto;
-    padding:20px;
+.container{
+max-width:1000px;
+margin:auto;
+padding:20px;
 }
 
-.tab{
-    display:none;
+.tab-content{
+display:none;
 }
 
-.tab.active{
-    display:block;
+.tab-content.active{
+display:block;
+}
+
+.card-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
 }
 
 .card{
-    background:white;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 2px 10px rgba(0,0,0,0.08);
-    margin-bottom:20px;
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+cursor:pointer;
+transition:.2s;
+}
+
+.card:hover{
+transform:translateY(-3px);
 }
 
 .card img{
-    width:100%;
-    display:block;
+width:100%;
+display:block;
 }
 
-.card-content{
-    padding:20px;
+.card-body{
+padding:15px;
+text-align:center;
 }
 
-.button{
-    display:inline-block;
-    padding:12px 18px;
-    border-radius:8px;
-    text-decoration:none;
-    background:#222;
-    color:white;
+.details{
+display:none;
+background:white;
+margin-top:25px;
+padding:25px;
+border-radius:15px;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
 }
 
-.preview{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:15px;
+.cover{
+display:block;
+max-width:450px;
+width:100%;
+margin:auto;
 }
 
-.preview-box{
-    background:#ddd;
-    height:250px;
-    border-radius:10px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+.preview-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
-.buy-buttons{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
+.preview-grid img{
+width:100%;
+border-radius:10px;
+}
+
+.btn{
+display:inline-block;
+padding:12px 18px;
+background:#222;
+color:white;
+text-decoration:none;
+border-radius:8px;
+margin:5px;
+}
+
+.buy-box{
+background:#f0f0f0;
+padding:20px;
+border-radius:10px;
+margin-top:20px;
 }
 
 footer{
+text-align:center;
+padding:30px;
+color:#666;
+}
+
+</style></head><body><header><h1>Thai Leafhopper Field Guides</h1><p>by Purikun</p></header><div class="tabs"><button class="active" onclick="showTab('guides',this)">
+Guides
+</button><button onclick="showTab('donate',this)">
+Donate
+</button></div><div class="container"><div id="guides" class="tab-content active"><div class="card-grid"><div class="card" onclick="toggleGuide()"><img src="Penthimiini_of_Thailand.png"><div class="card-body"><h2>Penthimiini of Thailand</h2><p>Photographic Field Guide</p></div></div></div><div id="guide-details" class="details"><img src="Penthimiini_of_Thailand.png"
+class="cover">
+
+<h1>Penthimiini of Thailand</h1><p>
+Photographic Field Guide to the Penthimiini of Thailand
+</p><hr><h2>About This Guide</h2><p>
+A photographic field guide covering the tribe
+Penthimiini of Thailand.
+Includes photographs, identification resources,
+and taxonomic information.
+</p><h2>Version</h2><p>
+Version 1.0
+</p><hr><h2>Free Preview</h2><h3>Thai Edition</h3><a class="btn"
+href="6_20260617_084050_0000.png"
+target="_blank">
+Preview Page 1
+</a>
+
+<a class="btn"
+href="7_20260617_084050_0001.png"
+target="_blank">
+Preview Page 2
+</a>
+
+<br><br>
+
+<h3>English Edition</h3><a class="btn"
+href="6_20260617_084711_0000.png"
+target="_blank">
+Preview Page 1
+</a>
+
+<a class="btn"
+href="7_20260617_084711_0001.png"
+target="_blank">
+Preview Page 2
+</a>
+
+<hr><div class="buy-box"><h2>Purchase Guide</h2><p>Select an edition:</p><a class="btn"
+href="https://drive.google.com/file/d/1Hkn1qAcpTr9_BiGImFnz9gnnm55xOhZD/view?usp=drivesdk"
+target="_blank">
+Thai Edition
+</a>
+
+<a class="btn"
+href="https://drive.google.com/file/d/1226EUeAw5o3zztlbY5E0uPsPUTIoH-3Y/view?usp=drivesdk"
+target="_blank">
+English Edition
+</a>
+
+<p>
+Future updates included.
+</p></div></div></div><div id="donate" class="tab-content"><div class="details" style="display:block;"><h2>Support the Project</h2><p>
+Donations help support future field guides,
+photography, field work and updates.
+</p><a class="btn" href="#">
+Donate
+</a></div></div></div><footer>© 2026 Purikun
+
+</footer><script>
+
+function showTab(id,button){
+
+document.querySelectorAll('.tab-content')
+.forEach(el=>el.classList.remove('active'));
+
+document.querySelectorAll('.tabs button')
+.forEach(el=>el.classList.remove('active'));
+
+document.getElementById(id)
+.classList.add('active');
+
+button.classList.add('active');
+
+}
+
+function toggleGuide(){
+
+let details =
+document.getElementById('guide-details');
+
+if(details.style.display==='block'){
+
+details.style.display='none';
+
+}else{
+
+details.style.display='block';
+
+details.scrollIntoView({
+behavior:'smooth'
+});
+
+}
+
+}
+
+</script></body>
+</html>footer{
     text-align:center;
     padding:30px;
     color:#666;
